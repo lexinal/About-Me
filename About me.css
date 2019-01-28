@@ -7,3 +7,9 @@ h1 {
 	font-size: 20px;
 	font-style: Georgia;
 }
+
+.human {
+	background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(11).jpg");
+	background-size: cover;
+
+}
