@@ -3,20 +3,11 @@
 setcookie("test_cookie", "test", time() + 3600, '/');
 ?> 
 <html>
-<head>
-<title>Login1 Example / PHP Submit Page</title>
-<style>
-body  { font-family:Verdana;
-        color:maroon;
-        background-color:aliceblue; }
-input { font-family:Verdana; width="1in"; }
-td    { text-align:center; }
-</style>
-</head>
+
 
 <body>
 
-<h1>Please log in to see more of my daily activities!</h1>
+<p>Please log in to see more of my daily activities!</p>
 <form action="display.php" method="post">
 <p>
     <input type="text" size="10" name="username" />            <br />
@@ -68,17 +59,25 @@ if(count($_COOKIE) > 0) {
     <input type="file" name="fileToUpload" id="fileToUpload">
     <input type="submit" value="Upload Image" name="submit">
 </form>
+<p>
 		</div>
 		<div>
 			<a href="https://www.linkedin.com/in/alexia-nal/">Feel free to reach out to learn more here or below</a> 
 		</div>
-		
+</p>
+<p>
+<?php
+echo "Today is " . date("Y-m-d") . "<br>";
+echo "Today is " . date("l");
+?>
+</p>
+<p>		
 <form action="welcome_get.php" method="get">
 Name: <input type="text" name="name"><br>
 E-mail: <input type="text" name="email"><br>
 <input type="submit">
 </form>	
-
+</p>
 Welcome <?php echo $_POST["name"]; ?><br>
 Your email address is: <?php echo $_POST["email"]; ?>		
 		
