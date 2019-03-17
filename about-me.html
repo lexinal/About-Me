@@ -1,10 +1,20 @@
 <!DOCTYPE html>
+<?php
+setcookie("test_cookie", "test", time() + 3600, '/');
+?> 
 <html>
 <head> 
 	<link rel="stylesheet" type="text/css" href="About me.css"/>
 	<title>AlexiaNal</title>
 </head>
 <body>
+<?php
+if(count($_COOKIE) > 0) {
+    echo "Cookies are enabled.";
+} else {
+    echo "Cookies are disabled.";
+}
+?>
 	<h1>About Me</h1>
 	<div class="human">
 			<img src="https://media.licdn.com/dms/image/C4E03AQFgDjkg0v3wcQ/profile-displayphoto-shrink_200_200/0?e=1550102400&v=beta&t=eb26WRraq8kvqG-6cMzoHHZZ4NE2Zbea1p2hAAaRsQI"/>
