@@ -3,6 +3,30 @@
 setcookie("test_cookie", "test", time() + 3600, '/');
 ?> 
 <html>
+<head>
+<title>Login1 Example / PHP Submit Page</title>
+<style>
+body  { font-family:Verdana;
+        color:maroon;
+        background-color:aliceblue; }
+input { font-family:Verdana; width="1in"; }
+td    { text-align:center; }
+</style>
+</head>
+
+<body>
+
+<h1>Please log in to see more of my daily activities!</h1>
+<form action="display.php" method="post">
+<p>
+    <input type="text" size="10" name="username" />            <br />
+    Username                                                   <br />
+    <input type="password" size="10" name="passwd" />          <br />
+    Password                                                   <br />
+    <input type="submit" value="Submit" name="submitsutton"/>  
+</p>
+</form>
+
 <head> 
 	<link rel="stylesheet" type="text/css" href="About me.css"/>
 	<title>AlexiaNal</title>
@@ -48,6 +72,7 @@ if(count($_COOKIE) > 0) {
 		<div>
 			<a href="https://www.linkedin.com/in/alexia-nal/">Feel free to reach out to learn more here or below</a> 
 		</div>
+		
 <form action="welcome_get.php" method="get">
 Name: <input type="text" name="name"><br>
 E-mail: <input type="text" name="email"><br>
